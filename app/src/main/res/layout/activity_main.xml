@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cimcitech.epaydemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="本次待支付的金额为0.01元"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择付款方式"/>
+        <RadioGroup
+            android:id="@+id/pay_rg"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/view_wechat_pay"
+                style="@style/RadioGroupCheckStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_wechat_pay"
+                android:drawableRight="@drawable/radio_pay_bg"
+                android:text="微信支付"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:checked="true"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"/>
+            <RadioButton
+                android:id="@+id/view_alipay_pay"
+                style="@style/RadioGroupCheckStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_ali_pay"
+                android:drawableRight="@drawable/radio_pay_bg"
+                android:text="支付宝支付"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                />
+        </RadioGroup>
+        <Button
+            android:id="@+id/pay_bt"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="立即支付"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
